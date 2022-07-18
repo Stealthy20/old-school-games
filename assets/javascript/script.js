@@ -62,11 +62,11 @@ const compareHands = (playerChoice, computerChoice) => {
     if (playerChoice === "rock") {
       if (computerChoice === "scissors") {
         outcome.textContent = "Player Wins";
-        increaseScorePlayer()
+        increaseScorePlayer();
         return;
       } else {
         outcome.textContent = "Computer Wins";
-        increaseScoreComputer()
+        increaseScoreComputer();
         return;
       }
     }
@@ -74,11 +74,11 @@ const compareHands = (playerChoice, computerChoice) => {
     if (playerChoice === "paper") {
       if (computerChoice === "scissors") {
         outcome.textContent = "Computer Wins";
-        increaseScoreComputer()
+        increaseScoreComputer();
         return;
       } else {
         outcome.textContent = "Player Wins";
-        increaseScorePlayer()
+        increaseScorePlayer();
         return;
       }
     }
@@ -86,11 +86,11 @@ const compareHands = (playerChoice, computerChoice) => {
     if (playerChoice === "scissors") {
       if (computerChoice === "rock") {
         outcome.textContent = "Computer Wins";
-        increaseScoreComputer()
+        increaseScoreComputer();
         return;
       } else {
         outcome.textContent = "Player Wins";
-        increaseScorePlayer()
+        increaseScorePlayer();
         return;
       }
     }
@@ -133,14 +133,14 @@ function getComputerChoice() {
 function increaseScorePlayer() {
 
   let oldScore = parseInt(document.getElementById("player-score").innerText);
-  document.getElementByclass("player-score").innerText = ++oldScore;
+  document.getElementById("player-score").innerText = ++oldScore;
 }
 
 // Increasing computer score by uppdating innertext of the span
 function increaseScoreComputer() {
 
   let oldScore = parseInt(document.getElementById("computer-score").innerText);
-  document.getElementByclass("computer-score").innerText = ++oldScore;
+  document.getElementById("computer-score").innerText = ++oldScore;
 }
 
 compareHands()
