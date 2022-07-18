@@ -63,7 +63,7 @@ const playGame = () => {
 // Comparing hands to se who is the winner
 const compareHands = (playerChoice, computerChoice) => {
 
-    const outcome = document.querySelector(".outcome");
+    const outcome = document.querySelector("#outcome");
     //Checking for a tie
     if (playerChoice === computerChoice) {
       outcome.textContent = "It is a tie";
@@ -131,17 +131,31 @@ function checkRound() {
   let playerScore = document.getElementById('player-score').innerHTML;
   let computerScore = document.getElementById('computer-score').innerHTML;
 
-  if (playerScore >= 10) {
+  if (playerScore >= 2) {
     document.getElementById('player-score').innerHTML = 0;
     document.getElementById('computer-score').innerHTML = 0;
-
+    document.getElementById('outcome').innerHTML = "Make Your Choice";
+    let modal = document.getElementById('modal');
+    let modalPara = document.getElementById('modalpara');
+    modal.style.display = 'inline';
+    modalPara.innerText = 'You won the round! Keep playing to see if you can win another!';
   }
-  if (computerScore >= 10) {
+  if (computerScore >= 2) {
     document.getElementById('player-score').innerHTML = 0;
     document.getElementById('computer-score').innerHTML = 0;
+    document.getElementById('outcome').innerHTML = "Make Your Choice";
+    let modal = document.getElementById('modal')
+    let modalPara = document.getElementById('modalpara');
+    modal.style.display = 'inline';
+    modalPara.innerText = 'Hard luck! The computer won this time. Play another round to see if you can beat the computer next time!';
   }
 }
 
+document.getElementById('close-modal').addEventListener('click', closeModal);
+
+function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+}
 //Calls the function playGame
 playGame()
 
