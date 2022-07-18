@@ -4,20 +4,20 @@ Function to run game when dom is finished loading.
 Adding a eventlistener to the lets play button to start the game
 */
 document.addEventListener("DOMContentLoaded", function() {
-    // Function to display start screen and fade to game screen when clicked.
-    const startGame = () => {
+  // Function to display start screen and fade to game screen when clicked.
+  const startGame = () => {
 
-        const playBtn = document.querySelector(".lets-play button");
-        const introScreen = document.querySelector(".lets-play");
-        const match = document.querySelector(".match");
-      // This fades Out the start screen and in the game
-        playBtn.addEventListener("click", () => {
-        introScreen.classList.add("fadeOut");
-        match.classList.add("fadeIn");
-        });
-    }; 
-        
-    startGame();
+      const playBtn = document.querySelector(".lets-play button");
+      const introScreen = document.querySelector(".lets-play");
+      const match = document.querySelector(".match");
+    // This fades Out the start screen and in the game
+      playBtn.addEventListener("click", () => {
+      introScreen.classList.add("fadeOut");
+      match.classList.add("fadeIn");
+      });
+  }; 
+      
+  startGame();
     
 });
 
@@ -28,25 +28,29 @@ const playGame = () => {
   const computerHand = document.querySelector(".computer-hand");
   const hands = document.querySelectorAll(".hands img");
 
+
   hands.forEach(hand => {
     hand.addEventListener("animationend", function() {
       this.style.animation = "";
     });
   });
+  
   //Options from which the computer will pick
   const computerOptions = ["rock", "paper", "scissors"];
 
+  //Computer Choice with random number on click
   options.forEach(option => {
     option.addEventListener("click", function() {
-      //Computer Choice with random number
+      
       const computerNumber = Math.floor(Math.random() * 3);
       const computerChoice = computerOptions[computerNumber];
 
+      //Delaying the function to after the animation is done
       setTimeout(() => {
         //Here is where we call compare hands
         compareHands(this.textContent, computerChoice);
         //Update Images to display the image of choice
-        playerHand.src = `assets/images//${this.textContent}.png`;
+        playerHand.src = `assets/images/${this.textContent}.png`;
         computerHand.src = `assets/images/${computerChoice}.png`;
       }, 1000);
       //Shaking animation of the hands
@@ -70,10 +74,12 @@ const compareHands = (playerChoice, computerChoice) => {
       if (computerChoice === "scissors") {
         outcome.textContent = "Player Wins";
         increaseScorePlayer();
+        checkRound()
         return;
       } else {
         outcome.textContent = "Computer Wins";
         increaseScoreComputer();
+        checkRound()
         return;
       }
     }
@@ -82,10 +88,12 @@ const compareHands = (playerChoice, computerChoice) => {
       if (computerChoice === "scissors") {
         outcome.textContent = "Computer Wins";
         increaseScoreComputer();
+        checkRound()
         return;
       } else {
         outcome.textContent = "Player Wins";
         increaseScorePlayer();
+        checkRound()
         return;
       }
     }
@@ -94,10 +102,12 @@ const compareHands = (playerChoice, computerChoice) => {
       if (computerChoice === "rock") {
         outcome.textContent = "Computer Wins";
         increaseScoreComputer();
+        checkRound()
         return;
       } else {
         outcome.textContent = "Player Wins";
         increaseScorePlayer();
+        checkRound()
         return;
       }
     }
@@ -115,6 +125,21 @@ function increaseScoreComputer() {
 
   let oldScore = parseInt(document.getElementById("computer-score").innerText);
   document.getElementById("computer-score").innerText = ++oldScore;
+}
+
+function checkRound() {
+  let playerScore = document.getElementById('player-score').innerHTML;
+  let computerScore = document.getElementById('computer-score').innerHTML;
+
+  if (playerScore >= 10) {
+    document.getElementById('player-score').innerHTML = 0;
+    document.getElementById('computer-score').innerHTML = 0;
+
+  }
+  if (computerScore >= 10) {
+    document.getElementById('player-score').innerHTML = 0;
+    document.getElementById('computer-score').innerHTML = 0;
+  }
 }
 
 //Calls the function playGame
