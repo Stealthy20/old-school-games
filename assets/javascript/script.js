@@ -3,15 +3,14 @@
 Function to run game when dom is finished loading.
 Adding a eventlistener to the lets play button to start the game
 */
-
 document.addEventListener("DOMContentLoaded", function() {
-    // Function to start the game.
+    // Function to display start screen and fade to game screen when clicked.
     const startGame = () => {
 
         const playBtn = document.querySelector(".lets-play button");
         const introScreen = document.querySelector(".lets-play");
         const match = document.querySelector(".match");
-    
+      // This fades Out the start screen and in the game
         playBtn.addEventListener("click", () => {
         introScreen.classList.add("fadeOut");
         match.classList.add("fadeIn");
@@ -22,10 +21,9 @@ document.addEventListener("DOMContentLoaded", function() {
     
 });
 
-
- /*  
-function runGame() {
-  const options = document.querySelectorAll(".options button");
+// Starts the game after you make your choice
+const playGame = () => {
+  const options = document.querySelectorAll(".choices button");
   const playerHand = document.querySelector(".player-hand");
   const computerHand = document.querySelector(".computer-hand");
   const hands = document.querySelectorAll(".hands img");
@@ -33,21 +31,30 @@ function runGame() {
   hands.forEach(hand => {
     hand.addEventListener("animationend", function() {
       this.style.animation = "";
-
-      setTimeout(() => {
-
-        compareHands(getPlayerChoice, getComputerChoice);
-
-        playerHand.src = `assets/images/${playerChoice}.png`;
-        computerHand.src = `assets/images/${computerChoice}.png`;
-      }, 2000);
-      //Animation
-      playerHand.style.animation = "shakePlayer 2s ease";
-      computerHand.style.animation = "shakeComputer 2s ease";
     });
   });
-}
-*/
+  //Options from which the computer will pick
+  const computerOptions = ["rock", "paper", "scissors"];
+
+  options.forEach(option => {
+    option.addEventListener("click", function() {
+      //Computer Choice with random number
+      const computerNumber = Math.floor(Math.random() * 3);
+      const computerChoice = computerOptions[computerNumber];
+
+      setTimeout(() => {
+        //Here is where we call compare hands
+        compareHands(this.textContent, computerChoice);
+        //Update Images to display the image of choice
+        playerHand.src = `assets/images//${this.textContent}.png`;
+        computerHand.src = `assets/images/${computerChoice}.png`;
+      }, 1000);
+      //Shaking animation of the hands
+      playerHand.style.animation = "shakePlayer 1s ease";
+      computerHand.style.animation = "shakeComputer 1s ease";
+    });
+  });
+};
 
 // Comparing hands to se who is the winner
 const compareHands = (playerChoice, computerChoice) => {
@@ -58,7 +65,7 @@ const compareHands = (playerChoice, computerChoice) => {
       outcome.textContent = "It is a tie";
       return;
     }
-    //Check for Rock
+    //Checking when player choose Rock
     if (playerChoice === "rock") {
       if (computerChoice === "scissors") {
         outcome.textContent = "Player Wins";
@@ -70,7 +77,7 @@ const compareHands = (playerChoice, computerChoice) => {
         return;
       }
     }
-    //Check for Paper
+    //Checking when player choose Paper
     if (playerChoice === "paper") {
       if (computerChoice === "scissors") {
         outcome.textContent = "Computer Wins";
@@ -82,7 +89,7 @@ const compareHands = (playerChoice, computerChoice) => {
         return;
       }
     }
-    //Check for Scissors
+    //Checking when player choose Scissors
     if (playerChoice === "scissors") {
       if (computerChoice === "rock") {
         outcome.textContent = "Computer Wins";
@@ -96,39 +103,6 @@ const compareHands = (playerChoice, computerChoice) => {
     }
 }
 
-// Function to get the inner text of the buttons to compare them to the computers choice. 
-  const options = document.querySelectorAll(".choices button");
-
-  options.forEach(option => {
-      option.addEventListener("click", function() {
-
-      let playerChoice = this.textContent;
-
-      console.log(playerChoice);
-
-      const computerChoices = ['rock', 'paper', 'scissors'];
-
-      let computerNumber = Math.floor(Math.random() * 3);
-      let computerChoice = computerChoices[computerNumber];
-      
-      console.log(computerChoice);
-
-      compareHands(this.textContent, computerChoice);
-      });
-  });
-  
-/*
-//choosing a random choice for the computer    
-function getComputerChoice() {
-
-  const computerChoices = ['rock', 'paper', 'scissors'];
-
-  const computerNumber = Math.floor(Math.random() * 3);
-  const computerChoice = computerChoices[computerNumber];
-  
-  console.log(computerChoice)
-}
-*/
 // Increasing Player score by uppdating innertext of the span
 function increaseScorePlayer() {
 
@@ -143,6 +117,6 @@ function increaseScoreComputer() {
   document.getElementById("computer-score").innerText = ++oldScore;
 }
 
-compareHands()
-
+//Calls the function playGame
+playGame()
 
