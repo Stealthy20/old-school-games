@@ -32,16 +32,20 @@ function increaseScoreComputer() {
     document.getElementByclass("computer-score").innerText = ++oldScore;
 }
 
-    //function playerChoice()
+function playerChoice() {
+    const choice = document.querySelectorAll('.choices button')
+    
+}
     
 function computerChoice() {
 
     const computerChoices = ['rock', 'paper', 'scissors'];
 
     const computerNumber = Math.floor(Math.random() * 3);
-    let result = computerChoices[computerNumber];
-
+    const computerChoice = computerChoices[computerNumber];
+   
 }
+
     
     //function compareHands()
     
