@@ -16,14 +16,22 @@ document.addEventListener("DOMContentLoaded", function() {
         }; 
         
     startGame();
-    });
+});
     
        //function runGame()
 
-    //function increaseScorePlayer()
+function increaseScorePlayer() {
 
-   // function increaseScoreComputer()
-    
+    let oldScore = parseInt(document.getElementById("player-score").innerText);
+    document.getElementByclass("player-score").innerText = ++oldScore;
+}
+
+function increaseScoreComputer() {
+
+    let oldScore = parseInt(document.getElementById("computer-score").innerText);
+    document.getElementByclass("computer-score").innerText = ++oldScore;
+}
+
     //function playerChoice()
     
 function computerChoice() {
@@ -31,15 +39,9 @@ function computerChoice() {
     const computerChoices = ['rock', 'paper', 'scissors'];
 
     const computerNumber = Math.floor(Math.random() * 3);
-    
-
     let result = computerChoices[computerNumber];
 
-    console.log(result)
-    
 }
-
-computerChoice()
     
     //function compareHands()
     
