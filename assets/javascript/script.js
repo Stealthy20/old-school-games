@@ -1,9 +1,3 @@
-
-/* 
-Function to run game when dom is finished loading.
-Adding a eventlistener to the lets play button to start the game
-*/
-document.addEventListener("DOMContentLoaded", function() {
   // Function to display start screen and fade to game screen when clicked.
   const startGame = () => {
 
@@ -17,9 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
       });
   }; 
       
-  startGame();
-    
-});
+ 
+
 
 // Starts the game after you make your choice
 const playGame = () => {
@@ -126,6 +119,7 @@ function increaseScoreComputer() {
   let oldScore = parseInt(document.getElementById("computer-score").innerText);
   document.getElementById("computer-score").innerText = ++oldScore;
 }
+
 /*
 Checks if round limit is reached to finish the game
 display modal with message and resets the game
@@ -162,5 +156,6 @@ function closeModal() {
 }
 
 //Calls the function playGame
+startGame()
 playGame()
 
