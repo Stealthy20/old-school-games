@@ -42,7 +42,7 @@ font-size: 25px;
 font-weight: bold;
 }
 
-.start-play-screen {
+.lets-play-screen {
     color: #3a3a3a;
     height: 50vh;
     display: flex;
@@ -52,11 +52,11 @@ font-weight: bold;
     transition: opacity 0.5s ease;
 }
 
-.start-play-screen h1 {
+.lets-play-screen h1 {
     font-size: 50px;
   }
 
-.start-play-screen button,
+.lets-play-screen button,
 .match button {
   width: 150px;
   height: 50px;
@@ -75,6 +75,7 @@ left: 50%;
 transform: translate(-50%, -50%);
 transition: opacity 0.5s ease 0.5s;
 }
+
 .winner {
 color: #3a3a3a;
 text-align: center;

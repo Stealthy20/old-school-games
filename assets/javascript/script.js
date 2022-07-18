@@ -1,14 +1,47 @@
-function rungame()
+/* Function to run game when dom is finished loading.
+Adding a eventlistener to the lets play button to start the game
+*/
+document.addEventListener("DOMContentLoaded", function() {
+    // Function to start the game.
+    const startGame = () => {
 
-function increaseScorePlayer()
+            const playBtn = document.querySelector(".lets-play-screen button");
+            const introScreen = document.querySelector(".lets-play-screen");
+            const match = document.querySelector(".match");
+        
+            playBtn.addEventListener("click", () => {
+            introScreen.classList.add("fadeOut");
+            match.classList.add("fadeIn");
+            });
+        }; 
+        
+    startGame();
+    });
+    
+       //function runGame()
 
-function increaseScoreComputer()
+    //function increaseScorePlayer()
 
-function playerChoice()
+   // function increaseScoreComputer()
+    
+    //function playerChoice()
+    
+function computerChoice() {
 
-function computerChoice()
+    const computerChoices = ['rock', 'paper', 'scissors'];
 
-function compareHands()
+    const computerNumber = Math.floor(Math.random() * 3);
+    
 
-function rungame()
+    let result = computerChoices[computerNumber];
+
+    console.log(result)
+    
+}
+
+computerChoice()
+    
+    //function compareHands()
+    
+
 
