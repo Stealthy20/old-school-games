@@ -126,36 +126,41 @@ function increaseScoreComputer() {
   let oldScore = parseInt(document.getElementById("computer-score").innerText);
   document.getElementById("computer-score").innerText = ++oldScore;
 }
-
+/*
+Checks if round limit is reached to finish the game
+display modal with message and resets the game
+*/
 function checkRound() {
   let playerScore = document.getElementById('player-score').innerHTML;
   let computerScore = document.getElementById('computer-score').innerHTML;
 
-  if (playerScore >= 2) {
+  if (playerScore >= 5) {
     document.getElementById('player-score').innerHTML = 0;
     document.getElementById('computer-score').innerHTML = 0;
     document.getElementById('outcome').innerHTML = "Make Your Choice";
     let modal = document.getElementById('modal');
-    let modalPara = document.getElementById('modalpara');
+    let modalContent = document.getElementById('modal-content');
     modal.style.display = 'inline';
-    modalPara.innerText = 'You won the round! Keep playing to see if you can win another!';
+    modalContent.innerText = 'Congratulations, You won! Can you win another?';
   }
-  if (computerScore >= 2) {
+  if (computerScore >= 5) {
     document.getElementById('player-score').innerHTML = 0;
     document.getElementById('computer-score').innerHTML = 0;
     document.getElementById('outcome').innerHTML = "Make Your Choice";
     let modal = document.getElementById('modal')
-    let modalPara = document.getElementById('modalpara');
+    let modalContent = document.getElementById('modal-content');
     modal.style.display = 'inline';
-    modalPara.innerText = 'Hard luck! The computer won this time. Play another round to see if you can beat the computer next time!';
+    modalContent.innerText = 'To bad, you got beat by a computer. Try again!';
   }
 }
 
+//Function to be able to close the modal by clicking the x
 document.getElementById('close-modal').addEventListener('click', closeModal);
 
 function closeModal() {
     document.getElementById('modal').style.display = 'none';
 }
+
 //Calls the function playGame
 playGame()
 
