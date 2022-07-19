@@ -230,14 +230,13 @@ div.fadeIn {
   z-index: 1;
   height: 100%;
   width: 100%;
-  background: transparent
-}
+  }
 
 .modal-inner {
-  background: #fff;
+  background: rgb(224, 223, 223);
   border: 3px solid #3a3a3a;
   margin: 0 auto;
-  height: 20%;
+  height: 10%;
   width: 50%;
   top: 40%;
   position: absolute;
@@ -245,19 +244,18 @@ div.fadeIn {
 }
 
 #modal-content {
-  padding: 20px 20px 0px 20px;
+  padding: 45px 20px 0px 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
+  font-weight: bold;
 }
 
 #close-modal {
-  float: right;
   font-size: 20px;
-  color: black;
+  color: #3a3a3a;
   font-weight: bold;
   position: absolute;
-  right: 26.5%;
+  right: 25.5%;
   top: 40%;
   z-index: 10;
 }
@@ -266,5 +264,4 @@ div.fadeIn {
   cursor: pointer;
   text-decoration: none;
 }
-
 /*-- End of Modal styling --*/
