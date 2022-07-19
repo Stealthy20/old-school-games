@@ -11,12 +11,16 @@
     <title>Rock paper and scissors</title>
 </head>
 <body>
+    <!-- Header of the site -->
     <header>
         <a href="index.html">
             <h1 class="main-header">Old School Games</h1>
         </a>
     </header>
+   
+    <!-- Section that wraps the whole game area -->
     <section class="game wrapper">
+        <!-- Area where i will display the scores -->
         <div class="score">
             <div>
                 <h2>Player</h2>
@@ -27,12 +31,14 @@
                 <span id="computer-score">0</span>
              </div>
         </div>
-        
+        <!-- Score area ends here -->
+
+        <!-- The start area with button to start the game -->
         <div class="lets-play">
             <h1>Rock Paper and Scissors</h1>
             <button type="button">Let's Play</button>
         </div>
-  
+        <!-- Area which the game will run in -->
         <div class="match fadeOut">
             <h2 id="outcome">Make Your Choice</h2>
             <div class="hands">
@@ -45,14 +51,18 @@
                 <button class="choice-btn" class="scissors">scissors</button>
             </div>
         </div>
+        <!-- Game area ends here -->
     </section>
+    <!-- Game area wrapper ends here -->
+
+    <!-- Modal to display message when game ends -->
     <div id="modal" class="modal-outer">
         <span id="close-modal">x</span>
         <div class="modal-inner">
             <p id="modal-content"></p>
         </div>
     </div>
-    <!-- Footer starts here-->   
+    <!-- Footer with links to my social medias-->   
     <footer>
         <ul id="social-media">
             <li><a href="https://www.facebook.com/fkjellin" target="_blank" rel="noopener" aria-label="Visit my Facebook profile (opens in a new tab)"><i class="fa-brands fa-facebook"></i></a></li>
@@ -63,6 +73,7 @@
     </footer>
     <!-- font awesome script-->
     <script src="https://kit.fontawesome.com/9beb937b3c.js" crossorigin="anonymous"></script>
+    <!-- Javascript file link -->
     <script src="assets/javascript/script.js"></script>
 </body>
 </html>
