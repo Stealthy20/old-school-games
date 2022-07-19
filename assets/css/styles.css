@@ -146,6 +146,11 @@ section {
   align-items: center;
 }
 
+.hands img {
+  width: auto;
+  height: auto
+}
+
 .player-hand {
   transform: rotateY(180deg);
 }
