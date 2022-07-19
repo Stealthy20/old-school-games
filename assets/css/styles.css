@@ -1,11 +1,14 @@
+/*-- Fonts Import url --*/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap');
 
+/* Code to remove edges in the webpage */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body style to center everything and pin footer to the bottom of the screen */
 body {
   font-family: 'Montserrat', sans-serif;
   text-align:center;
@@ -17,7 +20,9 @@ body {
 .wrapper{
   flex:1;
 }
+/* Body styling ends here */
 
+/* Styling of the header and H1 content */
 header {
   background-color: #FF99CC;
   overflow: auto;
@@ -36,7 +41,9 @@ h1 {
   font-size: 3.5em;
   line-height: 150px;
 }
+/* Styling of the header ends here */
 
+/* Styling of the footer and the social media links */
 footer {
   background-color: #FF99CC;
   height: 75px;
@@ -61,7 +68,9 @@ footer {
 #social-media a:hover {
   font-size: 120%;
 }
+/* Footer styling ends here */
 
+/* Styling of the score section */
 section {
   height: 100vh;
   background-color: #A5E6D4;
@@ -85,6 +94,7 @@ section {
   font-weight: bold;
 }
 
+/* styling of the start screen and the buttons */
 .lets-play {
   color: #3a3a3a;
   height: 50vh;
@@ -111,7 +121,9 @@ section {
   cursor: pointer;
   text-transform: uppercase;
 }
+/* Styling of the start screen ends here */
 
+/* Styling of the game are */
 .match {
   position: absolute;
   top: 50%;
@@ -138,6 +150,7 @@ section {
   transform: rotateY(180deg);
 }
 
+/* This makes the start screen fade out on click */
 div.fadeOut {
   opacity: 0;
   pointer-events: none;
@@ -148,6 +161,7 @@ div.fadeIn {
   pointer-events: all;
 }
 
+/* This makes the hands shake when you choose ur option */
 @keyframes shakePlayer {
   0% {
     transform: rotateY(180deg) translateY(0px);
