@@ -15,8 +15,53 @@ body {
     flex-direction:column;
     min-height:100vh;
 }
-   .wrapper{
+
+.wrapper{
     flex:1;
+}
+
+header {
+  background-color: #3a3a3a;
+  overflow: auto;
+  text-decoration: none;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+h1 {
+  font-family: roboto, sans-serif;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-size: 250%;
+  line-height: 150px;
+}
+
+footer {
+  background-color: #3a3a3a;
+  height: 75px;
+}
+
+#social-media {
+  text-align: center;
+  padding-top: 20px;
+}
+
+#social-media li {
+  display: inline;
+}
+
+#social-media i {
+  font-size: 250%;
+  line-height: 37px;
+  color: white;
+  margin-right: 50px;
+}
+
+#social-media a:hover {
+  font-size: 120%;
 }
 
 section {
@@ -25,11 +70,11 @@ section {
 }
 
 .score {
-    color: #3a3a3a;
-    height: 20vh;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  color: #3a3a3a;
+  height: 20vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .score h2 {
