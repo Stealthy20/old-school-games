@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    color: #3a3a3a;
+    color: #195A48;
     font-size: 1.2em;
     text-align:center;
     display:flex;
@@ -21,14 +21,14 @@ body {
 }
 
 header {
-  background-color: #3a3a3a;
+  background-color: #FF99CC;
   overflow: auto;
   text-decoration: none;
 }
 
 header a {
   text-decoration: none;
-  color: white;
+  color: #195A48 ;
 }
 
 h1 {
@@ -40,7 +40,7 @@ h1 {
 }
 
 footer {
-  background-color: #3a3a3a;
+  background-color: #FF99CC;
   height: 75px;
 }
 
@@ -56,7 +56,7 @@ footer {
 #social-media i {
   font-size: 250%;
   line-height: 37px;
-  color: white;
+  color: #195A48;
   margin-right: 50px;
 }
 
@@ -105,9 +105,10 @@ font-weight: bold;
 .match button {
   width: 150px;
   height: 50px;
-  color: rgb(224, 224, 224);
+  color: #195A48;
+  font-weight: bold;
   font-size: 20px;
-  background: rgb(111, 45, 117);
+  background: #FF99CC;
   border-radius: 3px;
   cursor: pointer;
   text-transform: uppercase;
