@@ -1,26 +1,25 @@
-  // Function to display start screen and fade to game screen when clicked.
-  const startGame = () => {
+startGame();
+playGame();
+
+// Function to display start screen and fade to game screen when clicked.
+function startGame() {
 
       const playBtn = document.querySelector(".lets-play button");
       const introScreen = document.querySelector(".lets-play");
       const match = document.querySelector(".match");
     // This fades Out the start screen and in the game
-      playBtn.addEventListener("click", () => {
+      playBtn.addEventListener("click", function() {
       introScreen.classList.add("fadeOut");
       match.classList.add("fadeIn");
       });
-  }; 
-      
- 
-
-
-// Starts the game after you make your choice
-const playGame = () => {
+  }
+    
+ // Starts the game after you make your choice
+function playGame () {
   const options = document.querySelectorAll(".choices button");
   const playerHand = document.querySelector(".player-hand");
   const computerHand = document.querySelector(".computer-hand");
   const hands = document.querySelectorAll(".hands img");
-
 
   hands.forEach(hand => {
     hand.addEventListener("animationend", function() {
@@ -51,10 +50,10 @@ const playGame = () => {
       computerHand.style.animation = "shakeComputer 1s ease";
     });
   });
-};
+}
 
 // Comparing hands to se who is the winner
-const compareHands = (playerChoice, computerChoice) => {
+function compareHands (playerChoice, computerChoice) {
 
     const outcome = document.querySelector("#outcome");
     //Checking for a tie
@@ -67,12 +66,12 @@ const compareHands = (playerChoice, computerChoice) => {
       if (computerChoice === "scissors") {
         outcome.textContent = "Player Wins";
         increaseScorePlayer();
-        checkRound()
+        checkRound();
         return;
       } else {
         outcome.textContent = "Computer Wins";
         increaseScoreComputer();
-        checkRound()
+        checkRound();
         return;
       }
     }
@@ -81,12 +80,12 @@ const compareHands = (playerChoice, computerChoice) => {
       if (computerChoice === "scissors") {
         outcome.textContent = "Computer Wins";
         increaseScoreComputer();
-        checkRound()
+        checkRound();
         return;
       } else {
         outcome.textContent = "Player Wins";
         increaseScorePlayer();
-        checkRound()
+        checkRound();
         return;
       }
     }
@@ -95,12 +94,12 @@ const compareHands = (playerChoice, computerChoice) => {
       if (computerChoice === "rock") {
         outcome.textContent = "Computer Wins";
         increaseScoreComputer();
-        checkRound()
+        checkRound();
         return;
       } else {
         outcome.textContent = "Player Wins";
         increaseScorePlayer();
-        checkRound()
+        checkRound();
         return;
       }
     }
@@ -141,7 +140,7 @@ function checkRound() {
     document.getElementById('player-score').innerHTML = 0;
     document.getElementById('computer-score').innerHTML = 0;
     document.getElementById('outcome').innerHTML = "Make Your Choice";
-    let modal = document.getElementById('modal')
+    let modal = document.getElementById('modal');
     let modalContent = document.getElementById('modal-content');
     modal.style.display = 'inline';
     modalContent.innerText = 'To bad, you got beat by a computer. Try again!';
@@ -154,8 +153,3 @@ document.getElementById('close-modal').addEventListener('click', closeModal);
 function closeModal() {
     document.getElementById('modal').style.display = 'none';
 }
-
-//Calls the function playGame
-startGame()
-playGame()
-

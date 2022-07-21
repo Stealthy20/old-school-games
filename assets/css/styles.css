@@ -38,7 +38,8 @@ h1 {
   font-family: roboto, sans-serif;
   letter-spacing: 1px;
   text-decoration: none;
-  font-size: 3.5em;
+  letter-spacing: 5px;
+  font-size: 3rem;
   line-height: 150px;
 }
 /* Styling of the header ends here */
@@ -82,11 +83,11 @@ section {
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
+  }
 
 .score h2 {
-  font-size: 30px;
-  padding: 10px;
+  font-size: 2.2rem;
+  padding: 1rem;
 }
 .score span {
   text-align: center;
@@ -110,14 +111,14 @@ section {
   }
 
 .lets-play button,
-.match button {
-  width: 150px;
-  height: 50px;
+.choice-btn {
+  width: 10rem;
+  height: 3rem;
   color: #3a3a3a;
   font-weight: bold;
   font-size: 20px;
   background: #FF99CC;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
   text-transform: uppercase;
 }
@@ -147,8 +148,9 @@ section {
 }
 
 .hands img {
-  width: auto;
-  height: auto
+  width: 45vw;
+  max-width: 400px;
+  height: auto;
 }
 
 .player-hand {
@@ -270,3 +272,42 @@ div.fadeIn {
   text-decoration: none;
 }
 /*-- End of Modal styling --*/
+
+/* Media Queris to make the site respnsive */
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 1.5rem;
+    line-height: 100px;
+  }
+
+  .score h2 {
+    font-size: 1.5rem;
+  }
+ 
+  .choice-btn {
+    width: 6.5rem;
+    height: 1.8rem;
+  }
+
+  .lets-play button {
+    width: 6.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+
+  #social-media i {
+    margin-right: 25px;
+  }
+
+  #outcome {
+    font-size: 35px;
+  }
+
+  .lets-play h1 {
+    font-size: 35px;
+    }
+
+  #modal-content {
+    padding: 20px 20px 0px 20px;
+  }
+}
