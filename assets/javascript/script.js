@@ -1,30 +1,29 @@
 
-// Function to display start screen and fade to game screen when clicked.
+// This is to transition from intro screen to the game
 const startGame = () => {
 
-      const playBtn = document.querySelector(".lets-play button");
-      const introScreen = document.querySelector(".lets-play");
-      const match = document.querySelector(".match");
-    // This fades Out the start screen and in the game
-      playBtn.addEventListener("click", () => {
+  const playBtn = document.querySelector(".lets-play button");
+  const introScreen = document.querySelector(".lets-play");
+  const match = document.querySelector(".match");
+
+  playBtn.addEventListener("click", () => {
+  introScreen.classList.add("fadeOut");
+  match.classList.add("fadeIn");
+  let playername = document.getElementById("p-name").value;
+  document.getElementById("playername").innerHTML = playername || 'Player';
+  });
+
+  document.getElementById("p-name").addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
       introScreen.classList.add("fadeOut");
       match.classList.add("fadeIn");
       let playername = document.getElementById("p-name").value;
       document.getElementById("playername").innerHTML = playername || 'Player';
-    });
-
-    // Runs the transition on when enter is pressed
-    document.getElementById("p-name").addEventListener("keydown", (event) => {
-      if (event.key === "Enter") {
-        introScreen.classList.add("fadeOut");
-        match.classList.add("fadeIn");
-        let playername = document.getElementById("p-name").value;
-        document.getElementById("playername").innerHTML = playername || 'Player';
-      }
+    }
   });
-  }
+}
     
- // Starts the game after you make your choice
+ // This runs the game
 const playGame = () => {
   const options = document.querySelectorAll(".choices button");
   const playerHand = document.querySelector(".player-hand");
@@ -49,7 +48,7 @@ const playGame = () => {
 
       //Delaying the function to after the animation is done
       setTimeout(() => {
-        //Here is where we call compare hands
+      
         compareHands(this.textContent, computerChoice);
         //Update Images to display the image of choice
         playerHand.src = `assets/images/${this.textContent}.png`;
@@ -65,64 +64,64 @@ const playGame = () => {
 // Comparing hands to se who is the winner
 const compareHands = (playerChoice, computerChoice) => {
 
-    const outcome = document.querySelector("#outcome");
-    //Checking for a tie
-    if (playerChoice === computerChoice) {
-      outcome.textContent = "It is a tie";
+  const outcome = document.querySelector("#outcome");
+  
+  if (playerChoice === computerChoice) {
+    outcome.textContent = "It is a tie";
+    return;
+  }
+  // Checking when player choose Rock
+  if (playerChoice === "rock") {
+    if (computerChoice === "scissors") {
+      outcome.textContent = "Player Wins";
+      increaseScorePlayer();
+      checkRound();
+      return;
+    } else {
+      outcome.textContent = "Computer Wins";
+      increaseScoreComputer();
+      checkRound();
       return;
     }
-    //Checking when player choose Rock
-    if (playerChoice === "rock") {
-      if (computerChoice === "scissors") {
-        outcome.textContent = "Player Wins";
-        increaseScorePlayer();
-        checkRound();
-        return;
-      } else {
-        outcome.textContent = "Computer Wins";
-        increaseScoreComputer();
-        checkRound();
-        return;
-      }
+  }
+  //Checking when player choose Paper
+  if (playerChoice === "paper") {
+    if (computerChoice === "scissors") {
+      outcome.textContent = "Computer Wins";
+      increaseScoreComputer();
+      checkRound();
+      return;
+    } else {
+      outcome.textContent = "Player Wins";
+      increaseScorePlayer();
+      checkRound();
+      return;
     }
-    //Checking when player choose Paper
-    if (playerChoice === "paper") {
-      if (computerChoice === "scissors") {
-        outcome.textContent = "Computer Wins";
-        increaseScoreComputer();
-        checkRound();
-        return;
-      } else {
-        outcome.textContent = "Player Wins";
-        increaseScorePlayer();
-        checkRound();
-        return;
-      }
+  }
+  //Checking when player choose Scissors
+  if (playerChoice === "scissors") {
+    if (computerChoice === "rock") {
+      outcome.textContent = "Computer Wins";
+      increaseScoreComputer();
+      checkRound();
+      return;
+    } else {
+      outcome.textContent = "Player Wins";
+      increaseScorePlayer();
+      checkRound();
+      return;
     }
-    //Checking when player choose Scissors
-    if (playerChoice === "scissors") {
-      if (computerChoice === "rock") {
-        outcome.textContent = "Computer Wins";
-        increaseScoreComputer();
-        checkRound();
-        return;
-      } else {
-        outcome.textContent = "Player Wins";
-        increaseScorePlayer();
-        checkRound();
-        return;
-      }
-    }
+  }
 }
 
-// Increasing Player score by uppdating innertext of the span
+// Increasing Player score 
 const increaseScorePlayer = () => {
 
   let oldScore = parseInt(document.getElementById("player-score").innerText);
   document.getElementById("player-score").innerText = ++oldScore;
 }
 
-// Increasing computer score by uppdating innertext of the span
+// Increasing computer score 
 const increaseScoreComputer = () => {
 
   let oldScore = parseInt(document.getElementById("computer-score").innerText);

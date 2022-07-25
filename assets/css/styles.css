@@ -73,7 +73,6 @@ footer {
 
 /* Styling of the score section */
 section {
-  height: 100vh;
   background-color: #182335;
 }
 
@@ -198,7 +197,8 @@ div.fadeIn {
   pointer-events: all;
 }
 
-/* This makes the hands shake when you choose ur option */
+/* This makes the hands shake when you choose ur option 
+code from Youtube.com/DevEd */
 @keyframes shakePlayer {
   0% {
     transform: rotateY(180deg) translateY(0px);
