@@ -9,12 +9,9 @@ function startGame() {
       playBtn.addEventListener("click", function() {
       introScreen.classList.add("fadeOut");
       match.classList.add("fadeIn");
-      let username = document.getElementById("p-name").value;
-      document.getElementById("playername").innerHTML = username || 'Player';
+      let playername = document.getElementById("p-name").value;
+      document.getElementById("playername").innerHTML = playername || 'Player';
     });
-
-
-     
   }
     
  // Starts the game after you make your choice
@@ -154,7 +151,7 @@ function checkRound() {
 document.getElementById('close-modal').addEventListener('click', closeModal);
 
 function closeModal() {
-    document.getElementById('modal').style.display = 'none';
+  document.getElementById('modal').style.display = 'none';
 }
 
 startGame();
