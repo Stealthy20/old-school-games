@@ -106,9 +106,23 @@ section {
   transition: opacity 0.5s ease;
 }
 
-.lets-play h1 {
-  font-size: 50px;
-  }
+.lets-play h2 {
+  font-size: 5em;
+}
+
+.rules {
+  padding: 1em;
+}
+
+.rules h3 {
+  font-size: 3em;
+  padding-bottom: .5em;
+}
+
+.rules p {
+  font-size: 1.5em;
+  
+}
 
 .lets-play button,
 .choice-btn {
@@ -121,6 +135,7 @@ section {
   border-radius: 5px;
   cursor: pointer;
   text-transform: uppercase;
+  border-color: #EAE4CC;
 }
 
 #p-name {

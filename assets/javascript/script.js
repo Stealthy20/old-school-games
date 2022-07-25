@@ -12,6 +12,16 @@ function startGame() {
       let playername = document.getElementById("p-name").value;
       document.getElementById("playername").innerHTML = playername || 'Player';
     });
+
+    // Runs the transioton on press Enter
+    document.getElementById("p-name").addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        introScreen.classList.add("fadeOut");
+        match.classList.add("fadeIn");
+        let playername = document.getElementById("p-name").value;
+        document.getElementById("playername").innerHTML = playername || 'Player';
+      }
+  });
   }
     
  // Starts the game after you make your choice
