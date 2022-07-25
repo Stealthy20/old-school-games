@@ -304,7 +304,7 @@ div.fadeIn {
 /*-- End of Modal styling --*/
 
 /* Media Queris to make the site respnsive */
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   h1 {
     font-size: 1.5rem;
     line-height: 100px;
@@ -315,15 +315,16 @@ div.fadeIn {
   }
  
   .choice-btn {
-    width: 6.5rem;
-    height: 1.8rem;
+    width: 120px;
+    height: 30px;
   }
 
   .lets-play button {
     width: 6.5rem;
     height: 2.5rem;
     font-size: 1rem;
-  }
+    margin-top: 20px;
+    }
 
   #social-media i {
     margin-right: 25px;
@@ -339,5 +340,38 @@ div.fadeIn {
 
   #modal-content {
     padding: 20px 20px 0px 20px;
+  }
+}
+
+/* Media Queris to make the site respnsive */
+@media screen and (max-width: 420px) {
+  .lets-play h2 {
+    font-size: 3em;
+  }
+
+  .rules h3 {
+    font-size: 2em;
+    padding-bottom: .5em;
+  }
+  
+  .rules p {
+    font-size: 1.2em;
+    
+  }
+
+  .choice-btn {
+    width: 75px;
+    height: 30px;
+    font-size: smaller;
+  }
+
+  #outcome {
+    font-size: 2em;
+  }
+
+  .score h2 {
+    font-size: 1.2em;
+    margin-left: 5px;
+    margin-right: 5px;
   }
 }

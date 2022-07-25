@@ -1,20 +1,20 @@
 
 // Function to display start screen and fade to game screen when clicked.
-function startGame() {
+const startGame = () => {
 
       const playBtn = document.querySelector(".lets-play button");
       const introScreen = document.querySelector(".lets-play");
       const match = document.querySelector(".match");
     // This fades Out the start screen and in the game
-      playBtn.addEventListener("click", function() {
+      playBtn.addEventListener("click", () => {
       introScreen.classList.add("fadeOut");
       match.classList.add("fadeIn");
       let playername = document.getElementById("p-name").value;
       document.getElementById("playername").innerHTML = playername || 'Player';
     });
 
-    // Runs the transioton on press Enter
-    document.getElementById("p-name").addEventListener("keydown", function(event) {
+    // Runs the transition on when enter is pressed
+    document.getElementById("p-name").addEventListener("keydown", (event) => {
       if (event.key === "Enter") {
         introScreen.classList.add("fadeOut");
         match.classList.add("fadeIn");
@@ -25,7 +25,7 @@ function startGame() {
   }
     
  // Starts the game after you make your choice
-function playGame () {
+const playGame = () => {
   const options = document.querySelectorAll(".choices button");
   const playerHand = document.querySelector(".player-hand");
   const computerHand = document.querySelector(".computer-hand");
@@ -63,7 +63,7 @@ function playGame () {
 }
 
 // Comparing hands to se who is the winner
-function compareHands (playerChoice, computerChoice) {
+const compareHands = (playerChoice, computerChoice) => {
 
     const outcome = document.querySelector("#outcome");
     //Checking for a tie
@@ -116,14 +116,14 @@ function compareHands (playerChoice, computerChoice) {
 }
 
 // Increasing Player score by uppdating innertext of the span
-function increaseScorePlayer() {
+const increaseScorePlayer = () => {
 
   let oldScore = parseInt(document.getElementById("player-score").innerText);
   document.getElementById("player-score").innerText = ++oldScore;
 }
 
 // Increasing computer score by uppdating innertext of the span
-function increaseScoreComputer() {
+const increaseScoreComputer = () => {
 
   let oldScore = parseInt(document.getElementById("computer-score").innerText);
   document.getElementById("computer-score").innerText = ++oldScore;
@@ -133,7 +133,7 @@ function increaseScoreComputer() {
 Checks if round limit is reached to finish the game
 display modal with message and resets the game
 */
-function checkRound() {
+const checkRound = () => {
   let playerScore = document.getElementById('player-score').innerHTML;
   let computerScore = document.getElementById('computer-score').innerHTML;
 
