@@ -1,5 +1,3 @@
-startGame();
-playGame();
 
 // Function to display start screen and fade to game screen when clicked.
 function startGame() {
@@ -11,7 +9,12 @@ function startGame() {
       playBtn.addEventListener("click", function() {
       introScreen.classList.add("fadeOut");
       match.classList.add("fadeIn");
-      });
+      let username = document.getElementById("p-name").value;
+      document.getElementById("playername").innerHTML = username || 'Player';
+    });
+
+
+     
   }
     
  // Starts the game after you make your choice
@@ -153,3 +156,6 @@ document.getElementById('close-modal').addEventListener('click', closeModal);
 function closeModal() {
     document.getElementById('modal').style.display = 'none';
 }
+
+startGame();
+playGame();
