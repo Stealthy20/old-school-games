@@ -122,6 +122,21 @@ section {
   cursor: pointer;
   text-transform: uppercase;
 }
+
+#p-name {
+  width: 12em;
+  height: 3em;
+  background-color: #E15546;
+  color: #EAE4CC;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 105%;
+}
+
+::placeholder {
+  color: #EAE4CC;
+  font-weight: bold;
+}
 /* Styling of the start screen ends here */
 
 /* Styling of the game are */
