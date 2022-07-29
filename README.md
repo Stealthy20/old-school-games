@@ -65,6 +65,40 @@ This was only a handfull of the challenges that i encountered during this projec
 - **Fix for bug 2**
     - I had a wronly named variable that made the player choice to compare to nothing. 
 
+- **Bug 3**
+    - Was not able to access the playersChoice in my function where i would compare the players choice and the computers random choice.
+      Everything was alway a Tie in the game 
+
+![Image of the outcome as a tie all the time](docs/bug3.JPG) 
+
+- **Fix for bug 3**
+    - Instead of having the player choice and the computer random choice in two diffrent functions. I added them togheter into the game function. 
+
+![Image of the fix for the third bug](docs/bug3-fix.JPG) 
+
+- **Bug 4**
+    - When game was over and player or computer had won, the scores didnt update, and i got a error in the console.
+
+![Image of the outcome as a tie all the time](docs/bug4.JPG) 
+
+- **Fix for bug 4**
+    - After alot of seartching and trying, i noticed that document.getElementByClass should be document.getElementById.
+
+![Image of the fix for the fourth bug](docs/bug4-fix.JPG) 
+
+- **Bug 5**
+    - Run my website through Lighthouse and got a 92% on best practise. 
+
+![Image of the outcome as a tie all the time](docs/bug5.JPG) 
+
+- **Fix for bug 5**
+    - I didnt have a set height or width of my images. Set width in my CSS file to look good on the site and set height to auto.
+      Got 100% on best practise after this. 
+
+![Image of the fix for the fourth bug](docs/bug5-fix.JPG) 
+
+
+
 ## Responsiveness
 
 ## Validator Testing
