@@ -35,12 +35,35 @@ In the first launch of this site we land directly into the Rock, Paper and Sciss
     - Snake
     - Hangman
     - Frogger
-
     - An area before game is launched where you can choose if you want to make changes to the rules.
 
 # Testing
+The site was tested all through the project to make sure that every little part work. 
+This was done with console.log results to make sure that small functions or parts of bigger functions was working as inteented before procceeding. 
 
-## Bugs
+I have gathered some of the problems and bugs that i encountered and will show them off below. 
+This was only a handfull of the challenges that i encountered during this project.
+
+## Bugs and problems
+
+- **Bug 1**
+    - I tried to get the console to log the inner html of the button that i clicked so that i could compare this to the computers random choice.
+   And as you can see in the picture the console didnt reconize the buttons.
+
+![Image of the first bug where console didnt log the button clicks](docs/bug1.JPG) 
+
+- **Fix for bug 1**
+    - Added a queryselector tho choose all the buttons. After that i added a eventlistener to run a function where i extracted the text with this.textContent;
+
+![Image of the fix for the first bug](docs/bug1-fix.JPG) 
+
+- **Bug 2**
+    - Error message "outcome is not defines at compareHands" when i tried to compare my choice to the computers random choice.
+
+![Image of the error message in the console](docs/bug2.JPG) 
+
+- **Fix for bug 2**
+    - I had a wronly named variable that made the player choice to compare to nothing. 
 
 ## Responsiveness
 
