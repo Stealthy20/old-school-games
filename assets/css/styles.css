@@ -271,7 +271,7 @@ code from Youtube.com/DevEd */
 
 .modal-inner {
   background: #EAE4CC;
-  border: 3px solid #EEAF9D;
+  border: 3px solid #E15546;
   margin: 0 auto;
   height: 10%;
   width: 50%;
@@ -343,7 +343,6 @@ code from Youtube.com/DevEd */
   }
 }
 
-/* Media Queris to make the site respnsive */
 @media screen and (max-width: 420px) {
   .lets-play h2 {
     font-size: 3em;
