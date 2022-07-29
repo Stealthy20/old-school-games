@@ -97,19 +97,36 @@ This was only a handfull of the challenges that i encountered during this projec
 
 ![Image of the fix for the fourth bug](docs/bug5-fix.JPG) 
 
+- **Bug 6**
+    - I got error message  of "Uncaught TypeError: Cannot set properties of null (setting 'innerHTML')" in my console when player tried to choose their own name. 
+
+![Image of the outcome as a tie all the time](docs/bug6.JPG) 
+
+- **Fix for bug 6**
+    - I had some extra code that wasn't needed and caused the error. 
+        Cleaned it and added to the eventlistener to start the game. Everything workes as inteended. 
+
+![Image of the fix for the fourth bug](docs/bug6-fix.JPG) 
 
 
 ## Responsiveness
+- **This was tested manually with Dev tools. I tried with my code using flex to avoid as many media queris as possible. I choosed as few breakpoints as i could while still keep the site looking good on all screens.**
+    - Ended up using two breakpoints. 
+    - 500px and down: At this point headaer, footer, headings and buttons didnt fit the screen anymore.
+    - 420px and down: To fit the smallest screen i needed to make headings, buttons and some text even smaller to fit.
 
 ## Validator Testing
   - **HTML through W3C Validator**
     - No errors
   - **CSS through Jigsaw Validator**
     - No errors
+  - **Javascript through Jshint Validator**
+    - No errors 
   - **Contrast validator through WebAim**
     - No errors
   - **Accessibility check through Wave**
     - No errors
+
 ## Technology Used
 - HTML
 - CSS
@@ -146,3 +163,5 @@ I deployed this website by using GitPages and following the steps below:
   - Press Enter to create your local clone.
 
   # Credits
+    - I used a guide on Youtube to give me inspiration and help when i got stuck. [The Video](https://www.youtube.com/watch?v=qWPtKtYEsN4)[DevEd Channel](https://www.youtube.com/c/DevEd)
+    - Icons in the footer are from [Font Awesome](https://fontawesome.com/)
