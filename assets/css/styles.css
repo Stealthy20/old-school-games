@@ -24,14 +24,14 @@ body {
 
 /* Styling of the header and H1 content */
 header {
-  background-color: #E15546;
+  background-color: #FF6242;
   overflow: auto;
   text-decoration: none;
 }
 
 header a {
   text-decoration: none;
-  color: #EAE4CC;
+  color: #000000;
 }
 
 h1 {
@@ -46,7 +46,7 @@ h1 {
 
 /* Styling of the footer and the social media links */
 footer {
-  background-color: #E15546;
+  background-color: #FF6242;
   height: 75px;
 }
 
@@ -62,7 +62,7 @@ footer {
 #social-media i {
   font-size: 250%;
   line-height: 37px;
-  color: #EAE4CC;
+  color: #000000;
   margin-right: 50px;
 }
 
@@ -97,7 +97,7 @@ section {
 /* styling of the start screen and the buttons */
 .lets-play {
   color: #EAE4CC;
-  height: 50vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -127,28 +127,28 @@ section {
 .choice-btn {
   width: 10rem;
   height: 3rem;
-  color: #EAE4CC;
+  color: #000000;
   font-weight: bold;
   font-size: 20px;
-  background: #E15546;
+  background: #FF6242;
   border-radius: 5px;
   cursor: pointer;
   text-transform: uppercase;
-  border-color: #EAE4CC;
+  border-color: #000000
 }
 
 #p-name {
   width: 12em;
   height: 3em;
-  background-color: #E15546;
-  color: #EAE4CC;
+  background-color:#FF6242;
+  color: #000000;
   border-radius: 5px;
   font-weight: bold;
   font-size: 105%;
 }
 
 ::placeholder {
-  color: #EAE4CC;
+  color: #000000;
   font-weight: bold;
 }
 /* Styling of the start screen ends here */
@@ -271,7 +271,7 @@ code from Youtube.com/DevEd */
 
 .modal-inner {
   background: #EAE4CC;
-  border: 3px solid #E15546;
+  border: 3px solid#FF6242;
   margin: 0 auto;
   height: 10%;
   width: 50%;
