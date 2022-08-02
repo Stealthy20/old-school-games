@@ -49,24 +49,24 @@ These were only a handful of the challenges that I encountered during this proje
     - I tried to get the console to log the inner HTML of the button that I clicked so that I could compare this to the computer's random choice.
    And as you can see in the picture the console didn't recognize the buttons.
 
-![Image of the first bug where console didnt log the button clicks](docs/bug1.jpg) 
+![Image of the first bug where the console didn't log the button clicks](docs/bug1.jpg) 
 
 - **Fix for bug 1**
-    - Added a queryselector tho choose all the buttons. After that i added a eventlistener to run a function where i extracted the text with this.textContent;
+    - Added a queryselector to choose all the buttons. After that, I added an eventlistener to run a function where I extracted the text with this.textContent;
 
 ![Image of the fix for the first bug](docs/bug1-fix.jpg) 
 
 - **Bug 2**
-    - Error message "outcome is not defines at compareHands" when i tried to compare my choice to the computers random choice.
+    - Error message "outcome is not defined at compareHands" when I tried to compare my choice to the computer's random choice.
 
 ![Image of the error message in the console](docs/bug2.jpg) 
 
 - **Fix for bug 2**
-    - I had a wronly named variable that made the player choice to compare to nothing. 
+    - I had a wrongly named variable that made the player choice to compare to nothing. 
 
 - **Bug 3**
-    - Was not able to access the playersChoice in my function where i would compare the players choice and the computers random choice.
-      Everything was alway a Tie in the game 
+  - Was not able to access the playersChoice in my function where I would compare the player's choice and the computer's random choice.
+  Everything was always a Tie in the game 
 
 ![Image of the outcome as a tie all the time](docs/bug3.jpg) 
 
