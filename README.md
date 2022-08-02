@@ -30,18 +30,18 @@ You have the option to enter your name here, and it will appear in the game. If 
 ![Image of the footer](docs/footer.jpg)
 
 ## Upcoming features 
-  - More games to the site. The first games to come is
+  - More games on the site. The first games to come are
   - Snake
   - Hangman
   - Frogger
-  - An area before game is launched where you can choose if you want to make changes to the rules.
+  - An area before a game is launched where you can choose if you want to make changes to the rules.
 
 # Testing
-The site was tested all through the project to make sure that every little part work. 
-This was done with console.log results to make sure that small functions or parts of bigger functions was working as inteented before procceeding. 
+The site was tested all through the project to make sure that every little part worked. 
+This was done with console.log results to make sure that small functions or parts of bigger functions were working as intended before proceeding. 
 
-I have gathered some of the problems and bugs that i encountered and will show them off below. 
-This was only a handfull of the challenges that i encountered during this project.
+I have gathered some of the problems and bugs that I encountered and will show them below. 
+These were only a handful of the challenges that I encountered during this project.
 
 ## Bugs and problems
 
