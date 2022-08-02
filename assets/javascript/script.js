@@ -1,4 +1,4 @@
-
+// Guide used for inspiration and help from youtuber DevEd
 // This is to transition from intro screen to the game
 const startGame = () => {
 

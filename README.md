@@ -109,10 +109,10 @@ These were only a handful of the challenges that I encountered during this proje
 
 
 ## Responsiveness
-- **This was tested manually with Dev tools. I tried with my code using flex to avoid as many media queris as possible. I choosed as few breakpoints as i could while still keep the site looking good on all screens.**
+- **This was tested manually with Dev tools. I tried with my code using flex to avoid as many media queries as possible. I chose as few breakpoints as I could while still keeping the site looking good on all screens.**
     - Ended up using two breakpoints. 
-    - 500px and down: At this point headaer, footer, headings and buttons didnt fit the screen anymore.
-    - 420px and down: To fit the smallest screen i needed to make headings, buttons and some text even smaller to fit.
+    - 500px and down: At this point header, footer, headings, and buttons didn't fit the screen anymore.
+    - 420px and down: To fit the smallest screen I needed to make headings, buttons, and some text even smaller to fit.
 
 ## Validator Testing
   - **HTML through W3C Validator**
@@ -162,7 +162,7 @@ I deployed this website by using GitPages and following the steps below:
   - Press Enter to create your local clone.
 
 # Credits
-  - I used a guide on Youtube to give me inspiration and help when i got stuck. [GitHub](https://github.com/Stealthy20/old-school-games/)[DevEd Channel](https://www.youtube.com/c/DevEd)
+  - I used a guide on Youtube to inspire me and help when I got stuck. [GitHub](https://github.com/Stealthy20/old-school-games/)[DevEd Channel](https://www.youtube.com/c/DevEd)
   - Icons in the footer are from [Font Awesome](https://fontawesome.com/)
 
 
