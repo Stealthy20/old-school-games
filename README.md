@@ -71,14 +71,14 @@ These were only a handful of the challenges that I encountered during this proje
 ![Image of the outcome as a tie all the time](docs/bug3.jpg) 
 
 - **Fix for bug 3**
-    - Instead of having the player choice and the computer random choice in two diffrent functions. I added them togheter into the game function. 
+   - Instead of having the player choice and the computer random choice in two different functions. I added them together into the game function. 
 
 ![Image of the fix for the third bug](docs/bug3-fix.jpg) 
 
 - **Bug 4**
-    - When game was over and player or computer had won, the scores didnt update, and i got a error in the console.
+   - When the game was over and the player or computer had won the scores didn't update, and I got an error in the console.
 
-![Image of the outcome as a tie all the time](docs/bug4.jpg) 
+![Image of the error message in the console](docs/bug4.jpg) 
 
 - **Fix for bug 4**
     - After alot of seartching and trying, i noticed that document.getElementByClass should be document.getElementById.
@@ -86,26 +86,26 @@ These were only a handful of the challenges that I encountered during this proje
 ![Image of the fix for the fourth bug](docs/bug4-fix.jpg) 
 
 - **Bug 5**
-    - Run my website through Lighthouse and got a 92% on best practise. 
+  - Ran my website through Lighthouse and got a 92% on best practice. 
 
-![Image of the outcome as a tie all the time](docs/bug5.jpg) 
+![Image of the Lighthouse report](docs/bug5.jpg) 
 
 - **Fix for bug 5**
-    - I didnt have a set height or width of my images. Set width in my CSS file to look good on the site and set height to auto.
-      Got 100% on best practise after this. 
+  - I didn't have a set height or width for my images. Set width in my CSS file to look good on the site and set the height to auto.
+  Got 100% on best practice after this. 
 
-![Image of the fix for the fourth bug](docs/bug5-fix.jpg) 
+![Image of the fix for the fifth bug](docs/bug5-fix.jpg) 
 
 - **Bug 6**
-    - I got error message  of "Uncaught TypeError: Cannot set properties of null (setting 'innerHTML')" in my console when player tried to choose their own name. 
+  - I got an error message of "Uncaught TypeError: Cannot set properties of null (setting 'innerHTML')" in my console when players tried to choose their own name. 
 
-![Image of the outcome as a tie all the time](docs/bug6.jpg) 
+![Image of the error message in the console](docs/bug6.jpg) 
 
 - **Fix for bug 6**
-    - I had some extra code that wasn't needed and caused the error. 
-        Cleaned it and added to the eventlistener to start the game. Everything workes as inteended. 
+  - I had some extra code that wasn't needed and caused the error. 
+  Cleaned it and added it to the eventlistener to start the game. Everything works as intended. 
 
-![Image of the fix for the fourth bug](docs/bug6-fix.jpg) 
+![Image of the fix for the sixth bug](docs/bug6-fix.jpg) 
 
 
 ## Responsiveness
