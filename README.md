@@ -1,9 +1,7 @@
 # Old School Games
-This is a site where the user can come to play Old School games.
-The site is just launched with only one game, but will be continuously updated with more games.
-The vision is to have old school games where you can choose to change some rules to make it diffrent, or not to keep it as we all remember them.
+The user can visit this website to play Old School games. The website recently went live with just one game, but more games will be added on a regular basis. The idea is to create retro games where you can alter the rules to make them different or leave them as we all remember them.
 
-// Make a Mockup at https://techsini.com/multi-mockup/index.php
+![Mockup of the site on diffrent devices](docs/mockup.jpg)
 
 # Live Site
 [Old School Games](https://stealthy20.github.io/old-school-games/)
@@ -11,31 +9,32 @@ The vision is to have old school games where you can choose to change some rules
 [GitHub](https://github.com/Stealthy20/old-school-games/)
 # Features
 **This site contains the following content**
-In the first launch of this site we land directly into the Rock, Paper and Scissors game.
+We immediately start playing the Rock, Paper, Scissors game when the website first launches.
+You have the option to enter your name here, and it will appear in the game. If left blank, "Player" will be shown in its place.
 
 ## Existing Features
  **Header**
   - Header with the name of the site. 
 
-![Image of the header](docs/header.JPG)
+![Image of the header](docs/header.jpg)
 
 ## Game Area
 - Game area where the game plays
 
-![Image of the game area](docs/game-area.JPG)
+![Image of the game area](docs/game-area.jpg)
 
 **Footer**
-    - A fully responsive footer with links to my social media. 
-    - Hover effect on the elements to make sure the user knows that they are clickable. 
+  - A fully responsive footer with links to my social media. 
+  - Hover effect on the elements to make sure the user knows that they are clickable. 
 
-![Image of the footer](docs/footer.JPG)
+![Image of the footer](docs/footer.jpg)
 
 ## Upcoming features 
-    - More games to the site. The first games to come is
-    - Snake
-    - Hangman
-    - Frogger
-    - An area before game is launched where you can choose if you want to make changes to the rules.
+  - More games to the site. The first games to come is
+  - Snake
+  - Hangman
+  - Frogger
+  - An area before game is launched where you can choose if you want to make changes to the rules.
 
 # Testing
 The site was tested all through the project to make sure that every little part work. 
@@ -50,17 +49,17 @@ This was only a handfull of the challenges that i encountered during this projec
     - I tried to get the console to log the inner html of the button that i clicked so that i could compare this to the computers random choice.
    And as you can see in the picture the console didnt reconize the buttons.
 
-![Image of the first bug where console didnt log the button clicks](docs/bug1.JPG) 
+![Image of the first bug where console didnt log the button clicks](docs/bug1.jpg) 
 
 - **Fix for bug 1**
     - Added a queryselector tho choose all the buttons. After that i added a eventlistener to run a function where i extracted the text with this.textContent;
 
-![Image of the fix for the first bug](docs/bug1-fix.JPG) 
+![Image of the fix for the first bug](docs/bug1-fix.jpg) 
 
 - **Bug 2**
     - Error message "outcome is not defines at compareHands" when i tried to compare my choice to the computers random choice.
 
-![Image of the error message in the console](docs/bug2.JPG) 
+![Image of the error message in the console](docs/bug2.jpg) 
 
 - **Fix for bug 2**
     - I had a wronly named variable that made the player choice to compare to nothing. 
@@ -69,44 +68,44 @@ This was only a handfull of the challenges that i encountered during this projec
     - Was not able to access the playersChoice in my function where i would compare the players choice and the computers random choice.
       Everything was alway a Tie in the game 
 
-![Image of the outcome as a tie all the time](docs/bug3.JPG) 
+![Image of the outcome as a tie all the time](docs/bug3.jpg) 
 
 - **Fix for bug 3**
     - Instead of having the player choice and the computer random choice in two diffrent functions. I added them togheter into the game function. 
 
-![Image of the fix for the third bug](docs/bug3-fix.JPG) 
+![Image of the fix for the third bug](docs/bug3-fix.jpg) 
 
 - **Bug 4**
     - When game was over and player or computer had won, the scores didnt update, and i got a error in the console.
 
-![Image of the outcome as a tie all the time](docs/bug4.JPG) 
+![Image of the outcome as a tie all the time](docs/bug4.jpg) 
 
 - **Fix for bug 4**
     - After alot of seartching and trying, i noticed that document.getElementByClass should be document.getElementById.
 
-![Image of the fix for the fourth bug](docs/bug4-fix.JPG) 
+![Image of the fix for the fourth bug](docs/bug4-fix.jpg) 
 
 - **Bug 5**
     - Run my website through Lighthouse and got a 92% on best practise. 
 
-![Image of the outcome as a tie all the time](docs/bug5.JPG) 
+![Image of the outcome as a tie all the time](docs/bug5.jpg) 
 
 - **Fix for bug 5**
     - I didnt have a set height or width of my images. Set width in my CSS file to look good on the site and set height to auto.
       Got 100% on best practise after this. 
 
-![Image of the fix for the fourth bug](docs/bug5-fix.JPG) 
+![Image of the fix for the fourth bug](docs/bug5-fix.jpg) 
 
 - **Bug 6**
     - I got error message  of "Uncaught TypeError: Cannot set properties of null (setting 'innerHTML')" in my console when player tried to choose their own name. 
 
-![Image of the outcome as a tie all the time](docs/bug6.JPG) 
+![Image of the outcome as a tie all the time](docs/bug6.jpg) 
 
 - **Fix for bug 6**
     - I had some extra code that wasn't needed and caused the error. 
         Cleaned it and added to the eventlistener to start the game. Everything workes as inteended. 
 
-![Image of the fix for the fourth bug](docs/bug6-fix.JPG) 
+![Image of the fix for the fourth bug](docs/bug6-fix.jpg) 
 
 
 ## Responsiveness
@@ -162,6 +161,8 @@ I deployed this website by using GitPages and following the steps below:
   - Type git clone, and then paste the URL you copied earlier.
   - Press Enter to create your local clone.
 
-  # Credits
-    - I used a guide on Youtube to give me inspiration and help when i got stuck. [The Video](https://www.youtube.com/watch?v=qWPtKtYEsN4)[DevEd Channel](https://www.youtube.com/c/DevEd)
-    - Icons in the footer are from [Font Awesome](https://fontawesome.com/)
+# Credits
+  - I used a guide on Youtube to give me inspiration and help when i got stuck. [GitHub](https://github.com/Stealthy20/old-school-games/)[DevEd Channel](https://www.youtube.com/c/DevEd)
+  - Icons in the footer are from [Font Awesome](https://fontawesome.com/)
+
+
