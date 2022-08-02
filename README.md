@@ -46,8 +46,8 @@ These were only a handful of the challenges that I encountered during this proje
 ## Bugs and problems
 
 - **Bug 1**
-    - I tried to get the console to log the inner html of the button that i clicked so that i could compare this to the computers random choice.
-   And as you can see in the picture the console didnt reconize the buttons.
+    - I tried to get the console to log the inner HTML of the button that I clicked so that I could compare this to the computer's random choice.
+   And as you can see in the picture the console didn't recognize the buttons.
 
 ![Image of the first bug where console didnt log the button clicks](docs/bug1.jpg) 
 
