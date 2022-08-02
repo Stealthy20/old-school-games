@@ -1,5 +1,8 @@
-// Guide used for inspiration and help from youtuber DevEd
-// This is to transition from intro screen to the game
+/* 
+Guide used for inspiration and help from youtuber DevEd 
+https://www.youtube.com/watch?v=qWPtKtYEsN4
+This is to transition from intro screen to the game
+*/
 const startGame = () => {
 
   const playBtn = document.querySelector(".lets-play button");
@@ -114,14 +117,14 @@ const compareHands = (playerChoice, computerChoice) => {
   }
 };
 
-// Increasing Player score 
+// Increasing Player score taken from the love math project
 const increaseScorePlayer = () => {
 
   let oldScore = parseInt(document.getElementById("player-score").innerText);
   document.getElementById("player-score").innerText = ++oldScore;
 };
 
-// Increasing computer score 
+// Increasing computer score taken from the love math project
 const increaseScoreComputer = () => {
 
   let oldScore = parseInt(document.getElementById("computer-score").innerText);
