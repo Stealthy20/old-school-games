@@ -21,7 +21,7 @@ const startGame = () => {
       document.getElementById("playername").innerHTML = playername || 'Player';
     }
   });
-}
+};
     
  // This runs the game
 const playGame = () => {
@@ -59,7 +59,7 @@ const playGame = () => {
       computerHand.style.animation = "shakeComputer 1s ease";
     });
   });
-}
+};
 
 // Comparing hands to se who is the winner
 const compareHands = (playerChoice, computerChoice) => {
@@ -112,21 +112,21 @@ const compareHands = (playerChoice, computerChoice) => {
       return;
     }
   }
-}
+};
 
 // Increasing Player score 
 const increaseScorePlayer = () => {
 
   let oldScore = parseInt(document.getElementById("player-score").innerText);
   document.getElementById("player-score").innerText = ++oldScore;
-}
+};
 
 // Increasing computer score 
 const increaseScoreComputer = () => {
 
   let oldScore = parseInt(document.getElementById("computer-score").innerText);
   document.getElementById("computer-score").innerText = ++oldScore;
-}
+};
 
 /*
 Checks if round limit is reached to finish the game
@@ -154,7 +154,7 @@ const checkRound = () => {
     modal.style.display = 'inline';
     modalContent.innerText = 'To bad, you got beat by a computer. Try again!';
   }
-}
+};
 
 //Function to be able to close the modal by clicking the x
 document.getElementById('close-modal').addEventListener('click', closeModal);
